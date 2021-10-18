@@ -1,0 +1,26 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true">
+    <p style="color: white"> Loading... </p>
+  </ngx-spinner>
+  <div id="layout" class="pure-g">
+    <div class="content">
+      <div>
+        <!-- A wrapper for all the blog posts -->
+        <div class="posts">
+          <h1 class="content-subhead">Blog Posts</h1>
+          <span style="color: red">{{errorMsg}}</span>
+          <!-- A single blog post -->
+          <section class="post" *ngIf="postDetails">
+            <header class="post-header">
+              <h2 class="post-title" [innerHTML]="postDetails.title.rendered "></h2>
+            </header>
+  
+            <div class="post-description">
+              <p [innerHTML]="postDetails.content.rendered">
+              </p>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </div>

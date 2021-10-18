@@ -1,0 +1,13 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" 
+type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+
+<div class="maps-container">
+    <h1>Welcome to Google Maps Integration</h1>
+
+    <input matInput ngx-google-places-autocomplete  #placesRef="ngx-places" class="user-input" (onAddressChange)="handleAddressChange($event)"/>
+
+    <agm-map [latitude] = "latitude" [longitude] = "longitude" (mapClick)="onLocation($event)" >
+        <agm-marker  [latitude]="latitude" [longitude] = "longitude" >
+        </agm-marker>
+    </agm-map>
+</div>

@@ -1,0 +1,7 @@
+{
+    "/wordpress":{
+        "target":"http://wordpress.org/news/wp-json",
+        "secure":false,
+        "logLevel": "debug"
+    }
+}
